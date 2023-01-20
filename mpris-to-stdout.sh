@@ -1,3 +1,4 @@
+#!/bin/sh
 player=$(dbus-send --print-reply --dest=org.freedesktop.DBus  /org/freedesktop/DBus org.freedesktop.DBus.ListNames | grep -oP 'org.mpris.MediaPlayer2.*' | sed 's/"//')
 
 if [ -z "$player" ];then
